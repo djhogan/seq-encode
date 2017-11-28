@@ -1,0 +1,3 @@
+include sencode/__init__.py
+include sencode/blosum62.txt
+include sencode/sencode.py

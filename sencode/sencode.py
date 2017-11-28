@@ -1,7 +1,11 @@
 import numpy as np
 import pandas as pd
 
-blosum62 = pd.read_table('blosum62.txt', delim_whitespace=True)
+import os
+package_dir, _ = os.path.split(__file__)
+data_file = os.path.join(package_dir, 'blosum62.txt')
+
+blosum62 = pd.read_table(data_file, delim_whitespace=True)
 def encode_blosum62(sequence):
     return np.array([blosum62[c] for c in sequence])
 
